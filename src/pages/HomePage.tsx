@@ -1,8 +1,7 @@
 import Typography from "@mui/material/Typography";
-import Title from "../components/Title";
 import Container from "@mui/material/Container";
 import { Link as RouterLink, useNavigate } from "react-router";
-import { CssBaseline } from "@mui/material";
+import CssBaseline from "@mui/material/CssBaseline";
 import Grid from "@mui/material/Grid";
 import BaseButton from "../components/Button";
 
@@ -11,9 +10,11 @@ function HomePage() {
   return (
     <>
       <CssBaseline />
-      <Container>
+      <Container maxWidth="sm">
         <Grid columns={1} container spacing={2}>
-          <Title color="textPrimary">Productive Mind</Title>
+          <Typography variant="h4" fontWeight={400}>
+            Productive Mind
+          </Typography>
 
           <Typography
             variant="subtitle1"
