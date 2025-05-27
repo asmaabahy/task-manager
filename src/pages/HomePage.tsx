@@ -31,7 +31,7 @@ function HomePage() {
           <BaseButton
             variant="contained"
             fullWidth
-            onClick={() => navigate("sign-up")}
+            onClick={() => navigate("/auth?mode=signup")}
           >
             Get Started
           </BaseButton>
@@ -45,7 +45,10 @@ function HomePage() {
             color="textSecondary"
           >
             Already have an account?
-            <RouterLink to={"login"} className="text-black underline mx-2">
+            <RouterLink
+              to={"/auth?mode=login"}
+              className="text-black underline mx-2"
+            >
               Sign in
             </RouterLink>
           </Typography>

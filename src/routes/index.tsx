@@ -1,7 +1,6 @@
-import { createBrowserRouter } from "react-router";
+import { createBrowserRouter, Navigate } from "react-router";
 import WelcomeLayout from "../layouts/WelcomeLayout";
-import LoginPage from "../pages/LoginPage";
-import SignupPage from "../pages/SignupPage";
+import AuthPage from "../pages/AuthPage";
 import DashboardLayout from "../layouts/DashboardLayout";
 import TodayTasksPage from "../pages/TodayTasksPage";
 import UpcomingTasksPage from "../pages/UpcomingTasksPage";
@@ -13,8 +12,9 @@ export const router = createBrowserRouter([
     element: <WelcomeLayout />,
     children: [
       { index: true, element: <HomePage /> },
-      { path: "login", element: <LoginPage /> },
-      { path: "sign-up", element: <SignupPage /> },
+      { path: "auth", element: <AuthPage /> },
+      { path: "sign-up", element: <Navigate to="/auth?mode=signup" replace /> },
+      { path: "login", element: <Navigate to="/auth?mode=login" replace /> },
     ],
   },
   {
