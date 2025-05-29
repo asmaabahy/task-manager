@@ -1,10 +1,15 @@
 import { Outlet } from "react-router";
+import SideMenu from "../components/SideMenu";
 
 function DashboardLayout() {
   return (
     <>
-      <div>DashboardLayout</div>
-      <Outlet />
+      <main >
+        <SideMenu />
+        <div>
+          <Outlet />
+        </div>
+      </main>
     </>
   );
 }
